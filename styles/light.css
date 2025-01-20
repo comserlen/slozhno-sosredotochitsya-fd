@@ -9,8 +9,76 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-}
+  --accent-color: #FF8DCB;
+  --header-title-color: #FFC2E6;
+  --title-color: #353430;
+  --text-color: #353430;
+  --bg-image: url(../images/cover-image-light.png);
+  --visibility: hidden;
+}  
+  .theme-light .page {
+    .header__theme-menu-button {
+      color: var( --text-color, #353430);
+    }
+  
+    .header__theme-menu-button:hover {
+      outline: 1px solid #32312D66;
+    }
+    
+    .header__theme-menu-button_active {
+      outline: 1px solid var( --text-color, #353430);
+    }
+    
+    .header__theme-menu-button:focus {
+      outline: none;
+    }
+    
+    .header__theme-menu-button:focus-visible {
+      border-bottom: 1px solid var( --text-color, #353430);
+    }
+    
+    .transparent { 
+      color: var( --text-color, #353430);
+    }
+  
+    .decorated-zone::before {
+      border-top: 1px solid var( --text-color, #353430);
+      border-right: 1px solid var( --text-color, #353430);
+    }
+  
+    .decorated-zone::after {
+      border-bottom: 1px solid var( --text-color, #353430);
+      border-left: 1px solid var( --text-color, #353430);
+    }
+  
+    .footer::before {
+      border-top: 1px solid var( --text-color, #353430);
+      border-right: 1px solid var( --text-color, #353430);
+    }
+  
+    .footer::after {
+      border-bottom: 1px solid var( --text-color, #353430);
+      border-left: 1px solid var( --text-color, #353430);
+    }
+  } 
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --header-title-color: #FFC2E6;
+    --title-color: #353430;
+    --text-color: #353430;
+    --bg-image: url(../images/cover-image-light.png);
+    --visibility: hidden;
+   
+
+  .theme-light .header__theme-menu-button {
+    color: var( --text-color, #353430);
+  }
+
+  .theme-light.transparent { 
+    color: var( --text-color, #353430);
+  }
+}
 }
