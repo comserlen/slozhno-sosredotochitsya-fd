@@ -10,6 +10,10 @@
   padding: 10px;
 } /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
+.header {
+  min-block-size: 668px;
+}
+
 .title {
   font-family: inherit;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -188,6 +192,7 @@
   display: grid;
   margin: 0;
   margin-block-start: 3em;
+  min-block-size: 668px;
 }
 
 .footer .title {
@@ -221,6 +226,10 @@
 @media (min-width: 768px) {
   .page {
     padding: 20px;
+  }
+
+  .header {
+    min-block-size: 1024px;
   }
 
   .title {
@@ -305,6 +314,7 @@
 
   .footer {
     margin-block-start: 5em;
+    min-block-size: 1024px;
   }
 
   .footer .title {
@@ -315,6 +325,11 @@
 }
 
 @media (min-width: 1024px) {
+  
+  .header {
+    min-block-size: 768px;
+  }
+  
   .header__theme-menu {
     justify-self: center;
     margin: 0;
@@ -343,6 +358,11 @@
   .content-colums .transparent {
     grid-column: 1 / 4;
   }
+
+  .footer {
+    min-block-size: 768px;
+  }
+
   .footer .title {
     margin-block-start: calc(50vh - 80px);
     margin-block-end: calc(50vh - 80px);
