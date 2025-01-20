@@ -8,30 +8,30 @@
   color: var(--text-color, #353430);
   font-family: var(--main-font, sans-serif);
   padding: 10px;
-}  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+} /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
-.title { 
+.title {
   font-family: inherit;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--title-weight, 700);
   line-height: var(--title-line-height, 95.7px);
   text-align: start;
-  color: var(--header-title-color, #DB00FF);
-  text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
+  color: var(--header-title-color, #db00ff);
+  text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
 
-.title-decor { 
+.title-decor {
   font-family: inherit;
   color: var(--title-color, #000028);
   font-size: var(--text-size, 18px);
   font-weight: var(--title-weight, 700);
   line-height: var(--line-height, 23.4px);
-  background-color: var(--accent-color, #FF0070);
+  background-color: var(--accent-color, #ff0070);
   margin-block-start: 1.1em;
   margin-block-end: 0.5em;
 }
 
-.header .title-decor { 
+.header .title-decor {
   margin-block-start: 14.7vw;
   margin-block-end: 8.26vw;
   max-inline-size: 491px;
@@ -48,8 +48,8 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color, #FF0070);
-  border-right: 1px solid var(--accent-color, #FF0070);
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
   display: block;
   justify-self: end;
   position: absolute;
@@ -59,15 +59,15 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color, #FF0070);
-  border-left: 1px solid var(--accent-color, #FF0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
   display: block;
   justify-self: start;
   margin-block-end: 10px;
-}  
+}
 
 .decor-element {
-  color: var(--accent-color,  #FF0070);
+  color: var(--accent-color, #ff0070);
   position: absolute;
   justify-self: end;
   margin-right: 9px;
@@ -82,8 +82,8 @@
   border-radius: 1ch;
   margin-left: 10px;
   margin-top: 8px;
-  background-color: var(--accent-color,  #FF0070);
-  box-shadow: 0px 0px 4px 2px var(--accent-color,  #FF0070);
+  background-color: var(--accent-color, #ff0070);
+  box-shadow: 0px 0px 4px 2px var(--accent-color, #ff0070);
 }
 
 .header__theme-menu {
@@ -99,7 +99,7 @@
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color, #FF0070);
+  color: var(--accent-color, #ff0070);
   font-family: var(--main-font, sans-serif);
   font-size: var(--text-size, 18px);
   font-weight: var(--text-weight, 400);
@@ -112,11 +112,11 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #FF007066;
+  outline: 1px solid #ff007066;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color,  #FF0070);
+  outline: 1px solid var(--accent-color, #ff0070);
   pointer-events: none;
 }
 
@@ -125,12 +125,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color,  #FF0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
 }
 
-.transparent { 
+.transparent {
   background-color: transparent;
-  color: var(--accent-color,  #FF0070);
+  color: var(--accent-color, #ff0070);
   margin-block-start: 2.2em;
   margin-block-end: 1em;
 }
@@ -139,7 +139,7 @@
   font-weight: var(--text-weight, 400);
 }
 
-.content-paragraph{
+.content-paragraph {
   font-family: inherit;
   font-size: var(--text-size, 18px);
   font-weight: var(--text-weight, 400);
@@ -147,13 +147,13 @@
 }
 
 .content-paragraph a {
-  color: var(--text-color, #F1B2CE);
+  color: var(--text-color, #f1b2ce);
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color,  #FF0070);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
 }
 
 .content-paragraph a:hover {
-  border-bottom: 1px solid var(--text-color, #F1B2CE);
+  border-bottom: 1px solid var(--text-color, #f1b2ce);
 }
 
 .content-paragraph a:focus {
@@ -161,7 +161,7 @@
 }
 
 .content-paragraph a:focus-visible {
-  outline: 1px solid var(--text-color, #F1B2CE);
+  outline: 1px solid var(--text-color, #f1b2ce);
 }
 
 .content-rows {
@@ -193,7 +193,7 @@
 .footer .title {
   margin-block-start: calc(50vh - 70px);
   margin-block-end: calc(50vh - 70px);
-  text-shadow: 2px 2px 0 var(--accent-color, #FF0070);
+  text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   margin-inline: auto;
 }
 
@@ -201,8 +201,8 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color,  #FF0070);
-  border-right: 1px solid var(--accent-color,  #FF0070);
+  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
   display: block;
   justify-self: end;
   position: absolute;
@@ -212,11 +212,10 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color,  #FF0070);
-  border-left: 1px solid var(--accent-color,  #FF0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
   display: block;
   justify-self: start;
-
 }
 
 @media (min-width: 768px) {
@@ -224,13 +223,13 @@
     padding: 20px;
   }
 
-  .title { 
+  .title {
     font-family: inherit;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-inline-start: -20px;
   }
 
-  .header .title-decor { 
+  .header .title-decor {
     inline-size: 48vw;
     margin-block-start: 21.1vw;
     margin-block-end: 15.36vw;
@@ -243,17 +242,16 @@
 
   .decorated-zone::after {
     margin-block-end: 20px;
-  }  
+  }
 
   .transparent {
     margin-block-start: 1.1em;
   }
 
   .content-rows {
-    display: grid;  
+    display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    "transparent rows";
+    grid-template-areas: "transparent rows";
     gap: 20px;
     margin-block-start: 2.5em;
     margin-block-end: 5em;
@@ -262,7 +260,7 @@
   .content-colums {
     margin-block-start: 5em;
     margin-block-end: 3.75em;
-  }  
+  }
 
   .content-colums .transparent {
     max-inline-size: 30vw;
@@ -277,14 +275,14 @@
     box-sizing: border-box;
     margin-block-start: 20px;
   }
-  
+
   img {
     inline-size: 100%;
     block-size: 100%;
     max-block-size: 100%;
-    object-fit:cover;
+    object-fit: cover;
   }
-  
+
   img:nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -299,7 +297,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 4;
   }
- 
+
   img:nth-child(5) {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
@@ -319,10 +317,10 @@
 @media (min-width: 1024px) {
   .header__theme-menu {
     justify-self: center;
-    margin:0;
+    margin: 0;
   }
-  
-  .header .title-decor { 
+
+  .header .title-decor {
     margin-block-start: 14.84vh;
     margin-block-end: 11.6vw;
   }
@@ -336,11 +334,11 @@
   }
 
   .content-colums {
-    display: grid;  
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 47px 1fr; 
+    grid-template-rows: 47px 1fr;
     gap: 20px;
-  }  
+  }
 
   .content-colums .transparent {
     grid-column: 1 / 4;
@@ -349,4 +347,4 @@
     margin-block-start: calc(50vh - 80px);
     margin-block-end: calc(50vh - 80px);
   }
-}  
+}
