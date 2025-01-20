@@ -13,7 +13,7 @@
   --header-title-color: #ffc2e6;
   --title-color: #353430;
   --text-color: #353430;
-  --bg-image: url(../images/cover-image-light.png);
+  --bg-image: url(./images/cover-image-light.png);
   --visibility: hidden;
 }
 .theme-light .page {
