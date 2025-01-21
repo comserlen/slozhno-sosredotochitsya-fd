@@ -10,73 +10,24 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #ff8dcb;
+  --decor-color: #353430;
   --header-title-color: #ffc2e6;
   --title-color: #353430;
   --text-color: #353430;
-  --bg-image: url(./images/cover-image-light.png);
+  --hover-button-color: #32312D66;
+  --bg-image: url("../images/cover-image-light.png");
   --visibility: hidden;
-}
-.theme-light .page {
-  .header__theme-menu-button {
-    color: var(--text-color, #353430);
-  }
-
-  .header__theme-menu-button:hover {
-    outline: 1px solid #32312d66;
-  }
-
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--text-color, #353430);
-  }
-
-  .header__theme-menu-button:focus {
-    outline: none;
-  }
-
-  .header__theme-menu-button:focus-visible {
-    border-bottom: 1px solid var(--text-color, #353430);
-  }
-
-  .transparent {
-    color: var(--text-color, #353430);
-  }
-
-  .decorated-zone::before {
-    border-top: 1px solid var(--text-color, #353430);
-    border-right: 1px solid var(--text-color, #353430);
-  }
-
-  .decorated-zone::after {
-    border-bottom: 1px solid var(--text-color, #353430);
-    border-left: 1px solid var(--text-color, #353430);
-  }
-
-  .footer::before {
-    border-top: 1px solid var(--text-color, #353430);
-    border-right: 1px solid var(--text-color, #353430);
-  }
-
-  .footer::after {
-    border-bottom: 1px solid var(--text-color, #353430);
-    border-left: 1px solid var(--text-color, #353430);
-  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #ff8dcb;
+    --decor-color: #353430;
     --header-title-color: #ffc2e6;
     --title-color: #353430;
     --text-color: #353430;
-    --bg-image: url(../images/cover-image-light.png);
+    --hover-button-color: #32312D66;
+    --bg-image: url("../images/cover-image-light.png");
     --visibility: hidden;
-
-    .theme-light .header__theme-menu-button {
-      color: var(--text-color, #353430);
-    }
-
-    .theme-light.transparent {
-      color: var(--text-color, #353430);
-    }
   }
 }

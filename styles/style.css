@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: var(--bg-image, url(../images/cover-image-dark.png));
+  background-image: var(--bg-image, url("../images/cover-image-dark.png"));
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -11,7 +11,12 @@
 } /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
 .header {
-  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  block-size: 648px;
+  position: relative;
+  justify-items: end;
+  align-items: start;
 }
 
 .title {
@@ -19,7 +24,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--title-weight, 700);
   line-height: var(--title-line-height, 95.7px);
-  text-align: start;
+  justify-self: start;
   color: var(--header-title-color, #db00ff);
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
 }
@@ -31,29 +36,24 @@
   font-weight: var(--title-weight, 700);
   line-height: var(--line-height, 23.4px);
   background-color: var(--accent-color, #ff0070);
-  margin-block-start: 1.1em;
-  margin-block-end: 0.5em;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+
 }
 
 .header .title-decor {
-  margin-block-start: 14.7vw;
-  margin-block-end: 8.26vw;
   max-inline-size: 491px;
+  margin-block-start: 56px;
   display: block;
   justify-self: end;
-}
-
-.decorated-zone {
-  display: grid;
-  margin: 0;
 }
 
 .decorated-zone::before {
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color, #ff0070);
-  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--decor-color, #ff0070);
+  border-right: 1px solid var(--decor-color, #ff0070);
   display: block;
   justify-self: end;
   position: absolute;
@@ -63,11 +63,10 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
-  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--decor-color, #ff0070);
+  border-left: 1px solid var(--decor-color, #ff0070);
   display: block;
   justify-self: start;
-  margin-block-end: 10px;
 }
 
 .decor-element {
@@ -86,24 +85,24 @@
   border-radius: 1ch;
   margin-left: 10px;
   margin-top: 8px;
-  background-color: var(--accent-color, #ff0070);
-  box-shadow: 0px 0px 4px 2px var(--accent-color, #ff0070);
+  background-color: var(--header-color, #ff0070);
+  box-shadow: 0px 0px 4px 2px var(--header-color, #ff0070);
 }
 
 .header__theme-menu {
   justify-self: end;
+  margin-block-start: 64px;
 }
 
 .header__theme-menu-list {
   list-style: none;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  margin-block-start: 17.3vw;
-  margin-block-end: 17.3vw;
 }
 
 .header__theme-menu-button {
-  color: var(--accent-color, #ff0070);
+  color: var(--decor-color, #ff0070);
   font-family: var(--main-font, sans-serif);
   font-size: var(--text-size, 18px);
   font-weight: var(--text-weight, 400);
@@ -116,11 +115,11 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid #ff007066;
+  outline: 1px solid var(--hover-button-color,#ff007066);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color, #ff0070);
+  outline: 1px solid var(--decor-color, #ff0070);
   pointer-events: none;
 }
 
@@ -129,14 +128,14 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--decor-color #ff0070);
 }
 
 .transparent {
   background-color: transparent;
-  color: var(--accent-color, #ff0070);
-  margin-block-start: 2.2em;
-  margin-block-end: 1em;
+  color: var(--decor-color , #ff0070);
+  margin-block-start: 40px;
+  margin-block-end: 20px;
 }
 
 .regular {
@@ -169,11 +168,11 @@
 }
 
 .content-rows {
-  margin-block-end: 3em;
+  margin-block-end: 50px;
 }
 
 .content-colums {
-  margin-block-end: 3em;
+  margin-block-end: 50px;
 }
 
 .pictures {
@@ -189,15 +188,16 @@
 }
 
 .footer {
+  position: relative;
+  block-size: max(100vh, 668px);
   display: grid;
-  margin: 0;
-  margin-block-start: 3em;
-  min-block-size: 668px;
+  padding: 10px;
+  align-items: center;
 }
 
 .footer .title {
-  margin-block-start: calc(50vh - 70px);
-  margin-block-end: calc(50vh - 70px);
+  margin-block-start: calc(50vh - 80px);
+  margin-block-end: calc(50vh - 80px);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   margin-inline: auto;
 }
@@ -206,19 +206,18 @@
   content: "";
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color, #ff0070);
-  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--decor-color, #ff0070);
+  border-right: 1px solid var(--decor-color, #ff0070);
   display: block;
   justify-self: end;
-  position: absolute;
 }
 
 .footer::after {
   content: "";
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
-  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--decor-color, #ff0070);
+  border-left: 1px solid var(--decor-color, #ff0070);
   display: block;
   justify-self: start;
 }
