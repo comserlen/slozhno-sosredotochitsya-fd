@@ -353,6 +353,10 @@
     margin-block-start: 0;
   }
 
+  .content-colums .transparent {
+    margin-block-start: 0;
+  }
+
   .content-colums {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
