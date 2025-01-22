@@ -281,7 +281,7 @@
     grid-template-areas: "transparent rows";
     gap: 20px;
     margin-block-start: 20px;
-    margin-block-end: 60px;
+    margin-block-end: 80px;
   }
   .content-colums {
     margin-block-end: 60px;
