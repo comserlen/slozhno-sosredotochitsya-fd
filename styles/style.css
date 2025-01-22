@@ -355,6 +355,7 @@
 
   .content-colums .transparent {
     margin-block-start: 0;
+    grid-column: 1 / 4;
   }
 
   .content-colums {
@@ -363,11 +364,7 @@
     grid-template-rows: 47px 1fr;
     gap: 20px;
   }
-
-  .content-colums .transparent {
-    grid-column: 1 / 4;
-  }
-
+  
   .footer {
     min-block-size: 768px;
   }
