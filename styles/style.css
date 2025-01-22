@@ -1,5 +1,12 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+body {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   background-image: var(--bg-image, url("./images/cover-image-dark.png"));
   background-size: cover;
@@ -188,7 +195,6 @@
 }
 
 .footer {
-  position: relative;
   block-size: max(100vh, 668px);
   display: grid;
   padding: 10px;

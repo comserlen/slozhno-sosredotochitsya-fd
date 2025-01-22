@@ -21,7 +21,7 @@
   --main-font: "IBM Plex mono";
   --title-line-height: 95.7px;
   --line-height: 23.4px;
-  --bg-image: url("./images/cover-image-dark.png");
+  --bg-image: url("../images/cover-image-dark.png");
   --visibility: visible;
 
 }
