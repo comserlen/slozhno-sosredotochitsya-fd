@@ -355,15 +355,19 @@
     margin-block-start: 0;
   }
 
-  .content-colums .transparent {
-    grid-column: 1 / 4;
-  }
-
   .content-colums {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 47px 1fr;
     gap: 20px;
+  }
+  
+  .content-colums .transparent {
+    grid-column: 1 / 4;
+  }
+
+  .content-colums .title-decor {
+    margin-block-start: 0;
   }
 
   .footer {
