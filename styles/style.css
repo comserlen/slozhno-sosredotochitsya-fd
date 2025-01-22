@@ -9,6 +9,7 @@ body {
 
 .page {
   background-image: var(--bg-image, url("./images/cover-image-dark.png"));
+  background-color: var(--bg-color, #000028);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
