@@ -280,12 +280,11 @@
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "transparent rows";
     gap: 20px;
-    margin-block-start: 20px; 
+    margin-block-start: 20px;
     margin-block-end: 80px;
   }
-
   .content-colums {
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
 
   .content-colums .transparent {
@@ -346,7 +345,7 @@
   }
 
   .header .title-decor {
-    margin-block-start: 114px;
+    margin-block-start: 132px;
   }
 
   .header__theme-menu-list {
