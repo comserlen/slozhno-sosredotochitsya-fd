@@ -277,7 +277,7 @@
 
   .content-rows {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 472px;
     grid-template-areas: "transparent rows";
     gap: 20px;
     margin-block-start: 20px;
@@ -294,7 +294,7 @@
   }
 
   .pictures {
-    grid-template-rows: 1fr 1.2fr 1.7fr;
+    grid-template-rows: 192px 230px 318px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     box-sizing: border-box;
@@ -361,13 +361,21 @@
     grid-template-rows: 47px 1fr;
     gap: 20px;
   }
-  
+
+  .content-rows {
+    grid-template-columns: 1fr 649px;
+  }
+
   .content-colums .transparent {
     grid-column: 1 / 4;
   }
 
   .content-colums .title-decor {
     margin-block-start: 0;
+  }
+
+  .pictures {
+    grid-template-rows: 260px 315px 433px;
   }
 
   .footer {
