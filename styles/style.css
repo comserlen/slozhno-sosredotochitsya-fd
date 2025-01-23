@@ -16,7 +16,7 @@
   justify-items: end;
   align-items: start;
   padding: 10px;
-  min-block-size: 668px;
+  block-size: max(100vh, 668px);
 }
 
 .title {
@@ -48,8 +48,7 @@
   justify-self: end;
 }
 
-.header::before,
-.footer::before {
+.decorated-zone::before {
   content: "";
   block-size: 25px;
   inline-size: 25px;
@@ -62,8 +61,7 @@
   inset-block-start: 10px;
 }
 
-.header::after,
-.footer::after {
+.decorated-zone::after {
   content: "";
   block-size: 25px;
   inline-size: 25px;
@@ -90,7 +88,7 @@
   display: inline-block;
   width: 9px;
   height: 9px;
-  border-radius: 1ch;
+  border-radius: 50%;
   margin-inline-start: 10px;
   margin-block-start: 8px;
   background-color: var(--header-color, #ff0070);
@@ -127,7 +125,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--decor-color, #ff0070);
+  outline: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -136,7 +134,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--decor-color #ff0070);
+  border-bottom: 1px solid currentColor;
 }
 
 .main {
@@ -167,7 +165,7 @@
 }
 
 .content-paragraph a:hover {
-  border-bottom: 1px solid var(--text-color, #f1b2ce);
+  border-bottom: 1px solid currentColor;
 }
 
 .content-paragraph a:focus {
@@ -200,7 +198,7 @@
 }
 
 .footer {
-  min-block-size: 668px;
+  block-size: max(100vh, 668px);
   display: grid;
   align-items: center;
   margin-block-start: 30px;
@@ -212,26 +210,6 @@
   margin-block-end: calc(50vh - 80px);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   margin-inline: auto;
-}
-
-.footer::before {
-  content: "";
-  block-size: 25px;
-  inline-size: 25px;
-  border-top: 1px solid var(--decor-color, #ff0070);
-  border-right: 1px solid var(--decor-color, #ff0070);
-  display: block;
-  justify-self: end;
-}
-
-.footer::after {
-  content: "";
-  block-size: 25px;
-  inline-size: 25px;
-  border-bottom: 1px solid var(--decor-color, #ff0070);
-  border-left: 1px solid var(--decor-color, #ff0070);
-  display: block;
-  justify-self: start;
 }
 
 @media (min-width: 768px) {
@@ -259,14 +237,12 @@
     inset-inline-end: 28px;
   }
   
-  .header::before,
-  .footer::before {
+  .decorated-zone::before {
     inset-inline-end: 20px;
     inset-block-start: 20px;
   }
 
-  .header::after,
-  .footer::after {
+  .decorated-zone::after {
     inset-inline-start: 20px;
     inset-block-end: 20px;
   }
