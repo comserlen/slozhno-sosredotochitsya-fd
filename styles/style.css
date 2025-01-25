@@ -6,7 +6,7 @@
   background-position: center;
   background-attachment: fixed;
   color: var(--text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
 } /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 
 .header {
@@ -36,8 +36,6 @@
   font-weight: var(--title-weight, 700);
   line-height: var(--line-height, 23.4px);
   background-color: var(--accent-color, #ff0070);
-  margin-block-start: 20px;
-  margin-block-end: 10px;
 
 }
 
@@ -79,7 +77,10 @@
   position: absolute;
   justify-self: end;
   inset-block-start: 10px;
-  inset-inline-end: 18px;
+  inset-inline-end: 20px;
+  font-size: var(--text-size, 18px);
+  font-weight: var( --text-weight, 400);
+  line-height: 25px;
   visibility: var(--visibility, visible);
 }
 
@@ -104,18 +105,18 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-block-start: 64px;
+  margin-block-start: 63px;
 }
 
 .header__theme-menu-button {
   color: var(--decor-color, #ff0070);
-  font-family: var(--main-font, sans-serif);
-  font-size: var(--text-size, 18px);
-  font-weight: var(--text-weight, 400);
+  font-family: var(--main-font, monospace);
+  font-size: 18px;
+  font-weight: 400;
   background-color: transparent;
   border: none;
   inline-size: 70px;
-  block-size: 26px;
+  block-size: 27px;
   margin: 0;
   cursor: pointer;
 }
@@ -139,23 +140,34 @@
 
 .main {
   padding: 10px;
+  margin-block-start: 30px;
+}
+
+.content-section { 
+  display: grid;
+  gap: 20px;
+  margin-block-end: 50px;
 }
 
 .transparent {
   background-color: transparent;
   color: var(--decor-color , #ff0070);
-  margin-block-end: 20px;
 }
 
 .regular {
-  font-weight: var(--text-weight, 400);
+  font-weight: 400;
+}
+
+.paragraph-orientation {
+  display: grid;
+  gap: 10px;
 }
 
 .content-paragraph {
   font-family: inherit;
-  font-size: var(--text-size, 18px);
-  font-weight: var(--text-weight, 400);
-  line-height: var(--line-height, 23.4px);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
 }
 
 .content-paragraph a {
@@ -176,15 +188,6 @@
   outline: 1px solid var(--text-color, #f1b2ce);
 }
 
-.content-rows {
-  margin-block-start: 30px;
-  margin-block-end: 50px;
-}
-
-.content-colums {
-  margin-block-end: 50px;
-}
-
 .pictures {
   display: grid;
   gap: 10px;
@@ -193,7 +196,7 @@
 
 .pictures img {
   display: block;
-  max-inline-size: 100%;
+  inline-size: 100%;
   margin-inline: auto;
 }
 
@@ -206,8 +209,6 @@
 }
 
 .footer .title {
-  margin-block-start: calc(50vh - 80px);
-  margin-block-end: calc(50vh - 80px);
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
   margin-inline: auto;
 }
@@ -224,17 +225,17 @@
   }
 
   .header .title-decor {
-    inline-size: 48vw;
+    inline-size: 47vw;
     margin-block-start: 163px;
   }
 
   .header__theme-menu-list {
-    margin-block-start: 172px;
+    margin-block-start: 168px;
   }
 
   .decor-element {
     inset-block-start: 20px;
-    inset-inline-end: 28px;
+    inset-inline-end: 30px;
   }
   
   .decorated-zone::before {
@@ -249,32 +250,40 @@
 
   .main {
     padding: 20px;
+    margin-block-start: 40px;
   }
 
-  .content-rows {
-    display: grid;
-    grid-template-columns: 1fr 472px;
-    grid-template-areas: "transparent rows";
-    gap: 20px;
-    margin-block-start: 20px;
+  .content-section {
+    grid-template-columns: 1fr 2fr;
     margin-block-end: 80px;
   }
-  .content-colums {
-    margin-block-end: 60px;
+
+  .content-section .transparent {
+    grid-column: 1 / 2;
   }
 
-  .content-colums .transparent {
+  .paragraph-orientation {
+    grid-column: 2 / 3;
+  }
+
+  .content-section:not(.another-construction) .title-decor {
+    max-block-size: 23px;
+  }
+
+  .another-construction .transparent {
+    grid-column: 1 / 3;
     max-inline-size: 30vw;
-    margin-block-start: 0;
-    margin-block-end: 0;
+  }
+
+  .another-construction .paragraph-orientation {
+    grid-column: 1 / 3;
   }
 
   .pictures {
-    grid-template-rows: 192px 230px 318px;
+    grid-template-rows: 23px 192px 230px 318px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     box-sizing: border-box;
-    margin-block-start: 20px;
   }
 
   img {
@@ -284,33 +293,36 @@
     object-fit: cover;
   }
 
-  img:nth-child(1) {
-    grid-column: 1 / 3;
+  .pictures .title-decor {
+    grid-column: 1 / 4;
     grid-row: 1 / 2;
+    inline-size: 100%;
   }
 
   img:nth-child(2) {
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
   }
 
   img:nth-child(3) {
-    grid-column: 1 / 2;
+    grid-column: 3 / 4;
     grid-row: 2 / 4;
   }
 
-  img:nth-child(5) {
+  img:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+  }
+
+  img:nth-child(6) {
     grid-column: 2 / 4;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
+
   }
 
   .footer {
     min-block-size: 1024px;
     margin-block-start: 40px;
-  }
-
-  .footer .title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -325,6 +337,7 @@
 
   .header .title-decor {
     margin-block-start: 132px;
+    inline-size: 48vw;
   }
 
   .header__theme-menu-list {
@@ -332,27 +345,23 @@
     margin-block-start: 0;
   }
 
-  .content-colums {
-    display: grid;
+  .another-construction {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 47px 1fr;
-    gap: 20px;
   }
 
-  .content-rows {
-    grid-template-columns: 1fr 649px;
+  .another-construction .paragraph-orientation {
+    grid-column: span 1;
+    grid-row: 2;
+    align-self: start;
   }
 
-  .content-colums .transparent {
-    grid-column: 1 / 4;
-  }
-
-  .content-colums .title-decor {
-    margin-block-start: 0;
+  .another-construction .title-decor {
+    max-block-size: 23px;
   }
 
   .pictures {
-    grid-template-rows: 260px 315px 433px;
+    grid-template-rows: 23px 260px 315px 433px;
   }
 
   .footer {
