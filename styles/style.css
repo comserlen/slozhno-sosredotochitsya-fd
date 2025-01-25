@@ -132,6 +132,7 @@
 
 .header__theme-menu-button:focus {
   outline: none;
+  border-bottom: 1px solid currentColor;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -143,7 +144,7 @@
   margin-block-start: 30px;
 }
 
-.content-section { 
+.content-section {
   display: grid;
   gap: 20px;
   margin-block-end: 50px;
@@ -343,6 +344,7 @@
   .header__theme-menu-list {
     flex-direction: row;
     margin-block-start: 0;
+    gap: 15px;
   }
 
   .another-construction {
