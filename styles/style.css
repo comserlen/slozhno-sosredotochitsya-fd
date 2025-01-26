@@ -348,18 +348,24 @@
   }
 
   .another-construction {
-    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 47px 1fr;
-  }
-
-  .another-construction .paragraph-orientation {
-    grid-column: span 1;
-    grid-row: 2;
-    align-self: start;
   }
 
   .another-construction .title-decor {
     max-block-size: 23px;
+    grid-row: 1;
+  }
+
+  .flexible-paragraph {
+    grid-column: 1 / 3;
+    display: grid; 
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flexible-paragraph .paragraph-orientation {
+    grid-column: span 1;
+    align-self: start;
   }
 
   .pictures {
