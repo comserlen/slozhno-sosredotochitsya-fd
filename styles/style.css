@@ -367,7 +367,7 @@
 
   .flexible-paragraph {
     grid-column: 1 / 3;
-    display: grid; 
+    display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
